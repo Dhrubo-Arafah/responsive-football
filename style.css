@@ -66,10 +66,13 @@ img{
 #hero .image,
 #highlights .image{
     width: 50%; 
+    height: auto;
 }
 
-#hero img, 
-#highlights img{
+#hero img{
+    position: relative;
+    animation: sliding 1.5s ease-in-out 5.5s  infinite alternate-reverse;
+    animation-play-state: running;
  transition: transform 0.2s ease-in-out;
 }
 
@@ -82,6 +85,18 @@ img{
     font-size: 64px;
     line-height: 80px;
     margin-bottom: 30px;
+}
+
+@keyframes sliding{
+    0%{
+ left: 0;
+        top: 100%;
+    }
+
+    100%{
+left: 10px;
+        top: 0%;
+    }
 }
 
 /* hero section css end */
